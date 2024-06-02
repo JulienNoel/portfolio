@@ -1,11 +1,11 @@
 import WordRotate from "./magicui/word-rotate"
 import Image from 'next/image'
 
-
+const TITLE = 'Hi I\'m Julien Noel'
 export const Presentation = ():JSX.Element => {
   return (
     <div className="w-screen">
-        <h1>Hi I'm Julien Noel 🖐️</h1>
+        <h1>{TITLE} 🖐️</h1>
         <p>I am a frontend React Native Developer</p>
         <WordRotate
           className="text-xl font-bold text-black dark:text-white"
