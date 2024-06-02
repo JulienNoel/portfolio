@@ -5,7 +5,7 @@ import { IconProps } from "@radix-ui/react-icons/dist/types"
 
 export const Technos = ():JSX.Element => {
   return (
-<div className="relative flex h-[400px] w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+<div className="relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
 
       <OrbitingCircles
         className="h-[30px] w-[30px] border-none bg-transparent"
