@@ -1,33 +1,54 @@
 import React from 'react'
-import { MagicCard, MagicContainer } from './magicui/magic-card'
 import { BorderBeam } from './magicui/border-beam'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './ui/card'
+import { Badge } from './ui/badge'
+
+type TProps = {
+  title: string;
+  description: string;
+  content: string;
+  badges: string[]
+}
+
+const cardsData: Array<TProps> = [{
+  title: 'HerleaBtp',
+  description: 'Website',
+  content: 'Website created with React/Gatsby for a construction compagny to promote their showroom and their work',
+  badges: ['React','Gatsby','Netlify','Contentful']
+},{
+  title: 'AI Talk',
+  description: 'Mobile App',
+  content: 'Mobile App created with React Native. Chat Generation with ChatGPT and image Generation with Dall-E',
+  badges: ['React-native','Chat-Gpt', 'Dall-E']
+}]
 
 export const Projets = ():JSX.Element => {
   return (
-    <MagicContainer
-    className={
-      "flex h-[500px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row"
-    }
-  >
-    <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl">
-      <p className="z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200">
-        Magic
-      </p>
-      <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
-    </MagicCard>
-    <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl">
-      <p className="z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200">
-        Card
-      </p>
-      <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
-    </MagicCard>
-    <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl">
-      <p className="z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200">
-        Demo
-      </p>
-      <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
-    </MagicCard>
-    
-  </MagicContainer>
+    <>
+    {cardsData.map(({title,description,content,badges},i) => <CardProjects 
+                                                                key={i}
+                                                                title={title} 
+                                                                description={description}
+                                                                content={content}
+                                                                badges={badges}
+                                                                />)}
+    </>
+  )
+}
+
+const CardProjects = ({title,description,content,badges}:TProps):JSX.Element => {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>        
+      </CardHeader>
+      <CardContent>        
+          <p>{content}</p>
+      </CardContent>
+      <CardFooter className='gap-1'>
+        {badges.map((it,i) => <Badge className='bg-jsYellow' variant="outline" key={i}>{it}</Badge>)}
+      </CardFooter>
+    </Card>
   )
 }

@@ -9,7 +9,7 @@ export const Presentation = ():JSX.Element => {
         <p>I am a frontend React Native Developer</p>
         <WordRotate
           className="text-xl font-bold text-black dark:text-white"
-          words={["React-Native", "Typescript", "Redux", "React-native Reanimated", "Frontend", "Javascript"]}
+          words={["React-Native", "Typescript", "Redux", "React-native Reanimated", "Frontend", "Javascript","React Navigation"]}
           />
           <div className="py-2">
             <Image src='/julien-noel.jpg' 

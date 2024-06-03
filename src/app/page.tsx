@@ -1,5 +1,6 @@
 import { Btns } from "@/components/Btns";
 import { ContactIcons } from "@/components/Contact-Icons";
+import { ContactForm } from "@/components/ContactForm";
 import { Description } from "@/components/Description";
 import { Presentation } from "@/components/Presentation";
 import { Projets } from "@/components/Projets";
@@ -15,6 +16,7 @@ export default function Home() {
       <Technos />
       <Description />
       <Projets />
+      <ContactForm />
     </div>
   );
 }
