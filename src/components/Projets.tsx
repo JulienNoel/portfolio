@@ -25,23 +25,24 @@ const cardsData: Array<TProps> = [{
 export const Projets = ():JSX.Element => {
   return (
     <>
-    {cardsData.map(({title,description,content,badges},i) => <CardProjects 
-                                                                key={i}
-                                                                title={title} 
-                                                                description={description}
-                                                                content={content}
-                                                                badges={badges}
-                                                                />)}
+    {cardsData.map(({title,description,content,badges},i) => {
+    return <CardProjects 
+                key={i}
+                title={title} 
+                description={description}
+                content={content}
+                badges={badges}
+                />})}
     </>
   )
 }
 
 const CardProjects = ({title,description,content,badges}:TProps):JSX.Element => {
   return (
-    <Card>
+    <Card className='my-4'>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>        
+        <CardDescription>{description}</CardDescription>     
       </CardHeader>
       <CardContent>        
           <p>{content}</p>
