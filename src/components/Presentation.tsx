@@ -15,7 +15,7 @@ export const Presentation = ():JSX.Element => {
           words={["React-Native", "Typescript", "Redux", "React-native Reanimated", "Frontend", "Javascript","React Navigation"]}
           />
           <div className="md:flex md:items-start md:justify-between md:gap-10 py-2">
-            <div className="h-[400px] flex flex-col justify-between">
+            <div className="md:h-[400px] flex flex-col justify-between">
               <Image src='/julien-noel.jpg' 
                     alt='julien Noel react native developer'
                     width={250}
