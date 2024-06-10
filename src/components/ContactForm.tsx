@@ -1,5 +1,7 @@
 'use client'
 import React, { ChangeEvent, FormEvent, useState } from "react"
+import { Html,Text } from "@react-email/components"
+
 
 type TFormData= {
   name: string;
@@ -7,12 +9,28 @@ type TFormData= {
   message: string;
 }
 
+
+type TProps = {
+  message: string
+}
+
+export const Email = ({ message }:TProps):JSX.Element => { 
+
+  return (
+    <Html lang="en">
+      <Text>{ message }</Text>
+    </Html>
+  );
+}
+
+const INITIAL_FORM_STATE = {
+  name: '',
+  email: '',
+  message: '',
+}
+
 export const ContactForm = ():JSX.Element => {
-  const [formData, setFormData] = useState<TFormData>({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState<TFormData>(INITIAL_FORM_STATE);
 
   const handleChange = (e:ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -22,10 +40,20 @@ export const ContactForm = ():JSX.Element => {
     });
   };
 
-  const handleSubmit = (e:FormEvent) => {
+  const handleSubmit = async (e:FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log(formData);
+    const response = await fetch('/api/send', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),     
+     })
+    console.log(response.ok)
+     if (response.ok) {
+       setFormData(INITIAL_FORM_STATE)
+     }
   };
 
   return (

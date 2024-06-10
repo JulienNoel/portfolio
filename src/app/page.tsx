@@ -9,14 +9,11 @@ import { Technos } from "@/components/Technos";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col p-8"> 
+    <div className="flex min-h-screen flex-col p-6"> 
       <Presentation/>
-      <Btns />
-      <ContactIcons />
-      <Technos />
       <Description />
       <Projets />
-      <ContactForm />
+      {/* <ContactForm /> */}
     </div>
   );
 }
