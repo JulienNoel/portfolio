@@ -13,7 +13,7 @@ export const Presentation = ():JSX.Element => {
           className="text-xl font-bold text-teal-400 dark:text-white"
           words={["React-Native", "Typescript", "Redux", "React-native Reanimated", "Frontend", "Javascript","React Navigation"]}
           />
-        <div className="flex flex-col h-fit justify-between">
+        <div className="flex flex-col justify-stretch">
           <Image src='/julien-noel.jpg' 
                 alt='julien Noel react native developer'
                 width={250}
