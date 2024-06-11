@@ -7,6 +7,5 @@ export const Description = ():JSX.Element =>{
   return (
     <div>
         <TextReveal text={DESCRIPTION} />
-    </div>
-  )
-}
+    </div>  
+)}

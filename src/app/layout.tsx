@@ -20,10 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}>{children}</body>
+      <body className='text-slate-400 selection:text-teal-900 selection:bg-teal-300 antialiased bg-slate-800 leading-relaxed'>
+        {children}
+      </body>
     </html>
   );
 }

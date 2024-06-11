@@ -57,9 +57,9 @@ export const ContactForm = ():JSX.Element => {
   };
 
   return (
-    <form id='contactForm' onSubmit={handleSubmit} className="max-w-md mx-auto p-6 my-4 border rounded-lg shadow-md">
+    <form id='contactForm' onSubmit={handleSubmit} className="max-w-md mx-auto p-6 my-4">
       <div className="mb-4">
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name:</label>
+        <label htmlFor="name" className="block text-sm font-medium text-slate-400">Name:</label>
         <input
           type="text"
           id="name"
@@ -67,11 +67,11 @@ export const ContactForm = ():JSX.Element => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 sm:text-sm"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
+        <label htmlFor="email" className="block text-sm font-medium text-slate-400">Email:</label>
         <input
           type="email"
           id="email"
@@ -79,21 +79,21 @@ export const ContactForm = ():JSX.Element => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 sm:text-sm"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message:</label>
+        <label htmlFor="message" className="block text-sm font-medium text-slate-400">Message:</label>
         <textarea
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
           required
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-teal-400 sm:text-sm"
         />
       </div>
-      <button type="submit" className="w-full px-4 py-2 bg-jsYellow text-white rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+      <button type="submit" className="w-full px-4 py-2 text-teal-400 bg-teal-400/10 border-teal-400/10 rounded-md hover:bg-teal-400 hover:text-teal-50 focus:outline-none">Submit</button>
     </form>
   )
 }
