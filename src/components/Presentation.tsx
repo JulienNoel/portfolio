@@ -13,13 +13,13 @@ export const Presentation = ():JSX.Element => {
           className="text-xl font-bold text-teal-400 dark:text-white"
           words={["React-Native", "Typescript", "Redux", "React-native Reanimated", "Frontend", "Javascript","React Navigation"]}
           />
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col h-full justify-between">
           <Image src='/julien-noel.jpg' 
                 alt='julien Noel react native developer'
                 width={250}
                 height={250}
                 loading='lazy'
-                className="rounded-lg h-1/2 shadow-md shadow-teal-400"                 
+                className="rounded-lg h-1/2 shadow-md shadow-teal-400 object-cover"                 
                 />
           <ContactIcons />
           <a href='/resume-julien-noel.pdf' target="_blank"><ShinyButton text="My Resume"/></a>
