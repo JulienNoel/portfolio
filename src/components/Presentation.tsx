@@ -6,7 +6,7 @@ import Image from 'next/image'
 const TITLE = 'Hi I\'m Julien Noel'
 export const Presentation = ():JSX.Element => {
   return (
-      <div className="flex flex-col md:justify-between md:fixed md:w-1/2 h-screen py-10">
+      <div className="flex flex-col md:justify-between md:fixed md:w-1/2 h-screen md:py-10">
         <h1 className="text-slate-200">{TITLE} 🖐️</h1>
         <p>I am a frontend React Native Developer,<br/>with a strong background in Javascript and Typescript</p>
         <WordRotate
