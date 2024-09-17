@@ -77,8 +77,8 @@ const CardProjects = ({ title, description, content, badges, url, videourl, imag
     <Card className='my-8 w-4/5 h-full bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]'>
       <CardHeader>
         <Link href={url ?? '#'}>
-          <CardTitle className='text-teal-400'>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
+          <CardTitle className='text-teal-400 text-2xl'>{title}</CardTitle>
+          <CardDescription className='text-xl'>{description}</CardDescription>
         </Link>
         {url &&
           <Link href={url}><Icons.web /></Link>}
@@ -91,10 +91,11 @@ const CardProjects = ({ title, description, content, badges, url, videourl, imag
             height={250}
             loading='lazy'
             className="rounded-lg w-full"
+            unoptimized={true}
           />}
       </CardHeader>
       <CardContent>
-        <p>{content}</p>
+        <p className='text-xl'>{content}</p>
       </CardContent>
       <CardFooter className='gap-1 flex-wrap'>
         {badges.map((it, i) => <Badge className='text-teal-400 bg-teal-400/10 border-teal-400/10' variant="outline" key={i}>{it}</Badge>)}
