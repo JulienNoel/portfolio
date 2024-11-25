@@ -26,7 +26,7 @@ const cardsData: Array<TProps> = [
     description: 'Website',
     content: 'Website / Saas created with Next JS',
     badges: ['React', 'Next JS', 'Vercel', 'javascript', 'Typescript'],
-    url: 'https://voicecone-ai.com',
+    url: 'https://voiceclone-ai.com',
     videourl: 'https://youtu.be/QuMuL4l0ay8'
   },
   {
