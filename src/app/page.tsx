@@ -6,7 +6,7 @@ import { Projets } from "@/components/Projets";
 
 export default function Home() {
   return (
-    <div className="flex flex-col p-8">
+    <div className="flex flex-col">
       <Presentation />
       <div className='w-full md:w-1/2 md:self-end'>
         <Description />
