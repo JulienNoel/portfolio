@@ -27,7 +27,7 @@ const cardsData: Array<TProps> = [
     content: 'Website / Saas created with Next JS for translating Videos with AI without loosing the tone of the voice',
     badges: ['React', 'Next JS', 'Vercel', 'javascript', 'Typescript', 'AI'],
     url: 'https://voiceclone-ai.com',
-    videourl: 'https://youtu.be/QuMuL4l0ay8'
+    videourl: 'https://youtu.be/ZzRUNBV0bhA'
   },
   {
     title: 'HerleaBtp',
