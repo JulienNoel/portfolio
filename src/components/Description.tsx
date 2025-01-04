@@ -6,7 +6,7 @@ const DESCRIPTION = 'My journey in web and mobile app development is driven by a
 export const Description = (): JSX.Element => {
   return (
     <div>
-      <TextReveal text={DESCRIPTION} />
+      <TextReveal className='font-mono uppercase' text={DESCRIPTION} />
     </div>
   )
 }

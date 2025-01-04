@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import HyperText from "./ui/hyper-text";
+import { Banner } from "./Banner";
 
 const TITLE = 'Hi I\'m Julien Noel'
 const skills = [
@@ -17,7 +19,8 @@ const skills = [
   "Next JS",
   "Tailwind CSS",
   "Expo",
-  "Kotlin"
+  "Kotlin",
+  "Express JS"
 ];
 
 export const Presentation = (): JSX.Element => {
@@ -29,17 +32,18 @@ export const Presentation = (): JSX.Element => {
             <AvatarImage src="/julien-noel.jpg" alt="julien Noel" />
             <AvatarFallback>JN</AvatarFallback>
           </Avatar>
-          <h1 className="text-slate-200 text-4xl md:text-5xl font-bold tracking-tight">
+          <h1 className="text-slate-200 text-4xl md:text-5xl font-mono tracking-tight">
             {TITLE} <span className="animate-wave inline-block">👋</span>
           </h1>
         </div>
         <Card className="bg-slate-800/50 border-slate-700">
           <CardContent className="pt-6">
-            <p className="text-slate-200 text-xl leading-relaxed">
+            <HyperText className="text-slate-200 text-xl leading-relaxed" duration={400}>
               I am a frontend React Native Developer,
-              <br />
+            </HyperText>
+            <HyperText className="text-slate-200 text-xl leading-relaxed" duration={400}>
               with a strong background in Javascript and Typescript
-            </p>
+            </HyperText>            
           </CardContent>
         </Card>
       </div>
@@ -48,13 +52,14 @@ export const Presentation = (): JSX.Element => {
           <Badge
             key={skill}
             variant="secondary"
-            className="bg-teal-500/10 text-teal-400 hover:bg-teal-500/20 transition-colors px-3 py-1 text-sm"
+            className="bg-teal-500/10 text-teal-400 hover:bg-teal-500/20 transition-colors px-3 py-1 text-xl"
           >
             {skill}
           </Badge>
         ))}
       </div>
       <ContactIcons />
+      <Banner />
     </div>
   )
 }

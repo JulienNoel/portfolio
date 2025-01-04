@@ -74,14 +74,14 @@ export const Projets = (): JSX.Element => {
 
 const CardProjects = ({ title, description, content, badges, url, videourl, imageUri }: TProps): JSX.Element => {
   return (
-    <Card className='my-8 w-4/5 h-full bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]'>
+    <Card className='my-8 w-4/5 h-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]'>
       <CardHeader>
         <Link href={url ?? '#'}>
-          <CardTitle className='text-teal-400 text-2xl'>{title}</CardTitle>
-          <CardDescription className='text-xl'>{description}</CardDescription>
+          <CardTitle className='font-mono text-teal-400 text-2xl'>{title}</CardTitle>
+          <CardDescription className='text-xl font-mono'>{description}</CardDescription>
         </Link>
         {url &&
-          <Link href={url}><Icons.web /></Link>}
+          <Link href={url}><Icons.web/></Link>}
         {videourl &&
           <ReactPlayer url={videourl} width='100%' controls={true} alt={title} />}
         {imageUri &&
@@ -95,10 +95,10 @@ const CardProjects = ({ title, description, content, badges, url, videourl, imag
           />}
       </CardHeader>
       <CardContent>
-        <p className='text-xl'>{content}</p>
+        <p className='text-xl font-mono'>{content}</p>
       </CardContent>
       <CardFooter className='gap-1 flex-wrap'>
-        {badges.map((it, i) => <Badge className='text-teal-400 bg-teal-400/10 border-teal-400/10' variant="outline" key={i}>{it}</Badge>)}
+        {badges.map((it, i) => <Badge className='text-xl text-teal-400 bg-teal-400/10 border-teal-400/10 hover:bg-teal-500/20' variant="outline" key={i}>{it}</Badge>)}
       </CardFooter>
     </Card>
   )
