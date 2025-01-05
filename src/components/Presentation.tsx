@@ -25,8 +25,8 @@ const skills = [
 
 export const Presentation = (): JSX.Element => {
   return (
-    <div className="flex flex-col justify-around md:fixed md:w-1/2 min-h-screen p-8 md:p-10 space-y-8 bg-gradient-to-b from-slate-900 to-slate-800">
-      <div className="space-y-6">
+    <div className="flex flex-col justify-around md:fixed md:w-1/2 min-h-screen space-y-8 bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="space-y-6 p-8">
         <div className="flex flex-row items-center gap-8">
           <Avatar className="w-20 h-20">
             <AvatarImage src="/julien-noel.jpg" alt="julien Noel" />
@@ -47,7 +47,7 @@ export const Presentation = (): JSX.Element => {
           </CardContent>
         </Card>
       </div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 p-8">
         {skills.map((skill) => (
           <Badge
             key={skill}

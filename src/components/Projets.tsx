@@ -74,7 +74,7 @@ export const Projets = (): JSX.Element => {
 
 const CardProjects = ({ title, description, content, badges, url, videourl, imageUri }: TProps): JSX.Element => {
   return (
-    <Card className='my-8 w-4/5 h-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]'>
+    <Card className='hover:border-2 hover:border-teal-500 my-8 w-4/5 h-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]'>
       <CardHeader>
         <Link href={url ?? '#'}>
           <CardTitle className='font-mono text-teal-400 text-2xl'>{title}</CardTitle>

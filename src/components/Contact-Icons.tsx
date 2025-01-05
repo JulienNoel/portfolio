@@ -5,7 +5,7 @@ import PulsatingButton from './ui/pulsating-button'
 
 export const ContactIcons = (): JSX.Element => {
   return (
-    <div className='flex flex-row gap-4 py-4'>
+    <div className='flex flex-row gap-4 py-4 px-8 items-center'>
         <div className="h-[40px] w-[40px] border-none bg-transparent">
             <a href='https://www.linkedin.com/in/julien-noel-374761123/' target="_blank"><Icons.linkedin /></a>
         </div>
