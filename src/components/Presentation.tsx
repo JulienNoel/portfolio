@@ -33,7 +33,7 @@ export const Presentation = (): JSX.Element => {
             <AvatarFallback>JN</AvatarFallback>
           </Avatar>
           <h1 className="text-slate-200 text-4xl md:text-5xl font-mono tracking-tight">
-            {TITLE} <span className="animate-wave inline-block">👋</span>
+            {TITLE} <span className="animate-waving-hand inline-block origin-[70%_70%]">👋</span>
           </h1>
         </div>
         <Card className="bg-slate-800/50 border-slate-700">

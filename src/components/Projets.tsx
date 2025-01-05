@@ -56,6 +56,7 @@ const cardsData: Array<TProps> = [
 export const Projets = (): JSX.Element => {
   return (
     <div id='projets' className='flex flex-col items-center'>
+      <h2 className='text-slate-200 text-4xl md:text-5xl font-mono tracking-tight mb-12 uppercase'>My Projects</h2>
       {cardsData.map(({ title, description, content, badges, url, videourl, imageUri }, i) => {
         return <CardProjects
           key={i}
@@ -74,7 +75,7 @@ export const Projets = (): JSX.Element => {
 
 const CardProjects = ({ title, description, content, badges, url, videourl, imageUri }: TProps): JSX.Element => {
   return (
-    <Card className='hover:border-2 hover:border-teal-500 my-8 w-4/5 h-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]'>
+    <Card className='hover:border-2 hover:border-teal-600 my-8 w-4/5 h-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]'>
       <CardHeader>
         <Link href={url ?? '#'}>
           <CardTitle className='font-mono text-teal-400 text-2xl'>{title}</CardTitle>
