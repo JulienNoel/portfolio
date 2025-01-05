@@ -56,7 +56,9 @@ const cardsData: Array<TProps> = [
 export const Projets = (): JSX.Element => {
   return (
     <div id='projets' className='flex flex-col items-center'>
-      <h2 className='text-slate-200 text-4xl md:text-5xl font-mono tracking-tight mb-12 uppercase'>My Projects</h2>
+      <h2 className='text-slate-200 text-4xl md:text-5xl font-mono tracking-tight mb-12 uppercase'>My Projects
+        <span className='animate-waiting-input'>_</span>
+      </h2>
       {cardsData.map(({ title, description, content, badges, url, videourl, imageUri }, i) => {
         return <CardProjects
           key={i}

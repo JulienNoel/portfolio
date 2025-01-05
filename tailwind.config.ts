@@ -104,16 +104,21 @@ const config = {
   					boxShadow: '0 0 0 8px var(--pulse-color)'
   				}
   			},
-			  wave: {
-				'0%': { transform: 'rotate(0.0deg)' },
-				'10%': { transform: 'rotate(25.0deg)' },
-				'20%': { transform: 'rotate(-8.0deg)' },
-				'30%': { transform: 'rotate(25.0deg)' },
-				'40%': { transform: 'rotate(-8.0deg)' },
-				'50%': { transform: 'rotate(15.0deg)' },
-				'60%': { transform: 'rotate(0.0deg)' },
-				'100%': { transform: 'rotate(0.0deg)' },
-			  },
+			wave: {
+			'0%': { transform: 'rotate(0.0deg)' },
+			'10%': { transform: 'rotate(25.0deg)' },
+			'20%': { transform: 'rotate(-8.0deg)' },
+			'30%': { transform: 'rotate(25.0deg)' },
+			'40%': { transform: 'rotate(-8.0deg)' },
+			'50%': { transform: 'rotate(15.0deg)' },
+			'60%': { transform: 'rotate(0.0deg)' },
+			'100%': { transform: 'rotate(0.0deg)' },
+			},
+			waitingInput: {
+				'0%': { opacity: '0' },
+				'80%': { opacity: '1' },
+				'100%': { opacity: '1' }
+			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -122,6 +127,7 @@ const config = {
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
   			pulse: 'pulse var(--duration) ease-out infinite',
 			'waving-hand': 'wave 2.5s ease-out infinite',
+			'waiting-input': 'waitingInput 0.6s alternate infinite'
   		}
   	}
   },
