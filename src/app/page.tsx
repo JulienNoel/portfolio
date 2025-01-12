@@ -1,3 +1,4 @@
+import { Banner } from "@/components/Banner";
 import { ContactForm } from "@/components/ContactForm";
 import { Description } from "@/components/Description";
 import { Presentation } from "@/components/Presentation";

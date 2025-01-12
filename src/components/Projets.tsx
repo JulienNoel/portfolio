@@ -4,7 +4,6 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Badge } from './ui/badge'
 import { Icons } from './Technos'
 import Image from 'next/image'
-
 import dynamic from "next/dynamic";
 import Link from 'next/link'
 
@@ -18,6 +17,7 @@ type TProps = {
   url?: string
   videourl?: string
   imageUri?: string
+  index?: number
 }
 
 const cardsData: Array<TProps> = [
@@ -69,40 +69,48 @@ export const Projets = (): JSX.Element => {
           url={url}
           videourl={videourl}
           imageUri={imageUri}
+          index={i}
         />
       })}
     </div>
   )
 }
 
-const CardProjects = ({ title, description, content, badges, url, videourl, imageUri }: TProps): JSX.Element => {
+const CardProjects = ({ title, description, content, badges, url, videourl, imageUri, index = 0 }: TProps): JSX.Element => {
   return (
-    <Card className='hover:border-2 hover:border-teal-600 my-8 w-4/5 h-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]'>
-      <CardHeader>
-        <Link href={url ?? '#'}>
-          <CardTitle className='font-mono text-teal-400 text-2xl'>{title}</CardTitle>
-          <CardDescription className='text-xl font-mono'>{description}</CardDescription>
-        </Link>
-        {url &&
-          <Link href={url}><Icons.web/></Link>}
-        {videourl &&
-          <ReactPlayer url={videourl} width='100%' controls={true} alt={title} />}
-        {imageUri &&
-          <Image src={imageUri}
-            alt={title}
-            width={250}
-            height={250}
-            loading='lazy'
-            className="rounded-lg w-full"
-            unoptimized={true}
-          />}
-      </CardHeader>
-      <CardContent>
-        <p className='text-xl font-mono'>{content}</p>
-      </CardContent>
-      <CardFooter className='gap-1 flex-wrap'>
-        {badges.map((it, i) => <Badge className='text-xl text-teal-400 bg-teal-400/10 border-teal-400/10 hover:bg-teal-500/20' variant="outline" key={i}>{it}</Badge>)}
-      </CardFooter>
-    </Card>
+    <div className='relative my-8 w-4/5 h-full overflow-hidden rounded-md'>
+      <div className={`absolute card-wrapper w-[200%] h-[200%] top-[-50%] left-[-50%] animate-border-spin`}/>
+      <div className='p-1'>
+        <Card className='relative w-full h-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-100 '>
+          <CardHeader>
+            <Link href={url ?? '#'}>
+              <CardTitle className='font-mono text-teal-400 text-2xl'>{title}</CardTitle>
+              <CardDescription className='text-xl font-mono'>{description}</CardDescription>
+            </Link>
+            {url &&
+              <Link href={url}><Icons.web/></Link>}
+            {videourl &&
+              <ReactPlayer url={videourl} width='100%' controls={true} alt={title} />}
+            {imageUri &&
+              <Image src={imageUri}
+                alt={title}
+                width={250}
+                height={250}
+                loading='lazy'
+                className="rounded-lg w-full"
+                unoptimized={true}
+              />}
+          </CardHeader>
+          <CardContent>
+            <p className='text-xl font-mono'>{content}</p>
+          </CardContent>
+          <CardFooter className='gap-1 flex-wrap'>
+            {badges.map((it, i) => <Badge className='text-xl text-teal-400 bg-teal-400/10 border-teal-400/10 hover:bg-teal-500/20' variant="outline" key={i}>{it}</Badge>)}
+          </CardFooter>
+        </Card>  
+      </div>
+    </div>
   )
 }
+
+//shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]

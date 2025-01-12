@@ -118,7 +118,11 @@ const config = {
 				'0%': { opacity: '0' },
 				'80%': { opacity: '1' },
 				'100%': { opacity: '1' }
-			}
+			},
+			'border-spin': {
+          		'from': { transform: 'rotate(0deg)' },
+				'to': { transform: 'rotate(360deg)' }
+        	},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -127,7 +131,8 @@ const config = {
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
   			pulse: 'pulse var(--duration) ease-out infinite',
 			'waving-hand': 'wave 2.5s ease-out infinite',
-			'waiting-input': 'waitingInput 0.6s alternate infinite'
+			'waiting-input': 'waitingInput 0.6s alternate infinite',
+			'border-spin': 'border-spin 7s linear infinite',
   		}
   	}
   },

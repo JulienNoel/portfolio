@@ -75,14 +75,25 @@
     }
   }
 
+  @layer utilities {
+    .card-wrapper {
+      background: conic-gradient(
+        rgba(14, 165, 233, 0.8) 0deg,
+        rgba(12, 108, 114, 0.8) 0deg,
+      transparent 80deg
+    );
+    }
+  }
+
+
   /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 
 /* Handle */

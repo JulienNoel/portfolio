@@ -1,5 +1,4 @@
 import { ContactIcons } from "./Contact-Icons";
-import Image from 'next/image'
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
@@ -25,8 +24,8 @@ const skills = [
 
 export const Presentation = (): JSX.Element => {
   return (
-    <div className="flex flex-col justify-around md:fixed md:w-1/2 min-h-screen space-y-8 bg-gradient-to-b from-slate-900 to-slate-800">
-      <div className="space-y-6 p-8">
+    <div className="flex flex-col justify-between md:fixed md:w-1/2 min-h-screen space-y-8 bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="space-y-12 p-8">
         <div className="flex flex-row items-center gap-8">
           <Avatar className="w-20 h-20">
             <AvatarImage src="/julien-noel.jpg" alt="julien Noel" />
