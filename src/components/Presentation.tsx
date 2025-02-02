@@ -4,6 +4,7 @@ import { Badge } from "./ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import HyperText from "./ui/hyper-text";
 import { Banner } from "./Banner";
+import { InfiniteScroll } from "./Infinite-scroll";
 
 const TITLE = 'Hi I\'m Julien Noel'
 const skills = [
@@ -24,11 +25,11 @@ const skills = [
 
 export const Presentation = (): JSX.Element => {
   return (
-    <div className="flex flex-col justify-between md:fixed md:w-1/2 min-h-screen space-y-8 bg-gradient-to-b from-slate-900 to-slate-800">
-      <div className="space-y-12 p-8">
-        <div className="flex flex-col items-center gap-8">
-          <Avatar className="w-[380px] h-[380px]">
-            <AvatarImage src="/julien-noel.jpg" alt="julien Noel" />
+    <div className="flex flex-col h-screen justify-between md:fixed md:w-1/2 bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="flex flex-col px-8">
+        <div className="flex flex-col items-center gap-4">
+          <Avatar className="w-[150px] h-[150px]">
+            <AvatarImage src="/julien-noel.jpg" alt="julien Noel" className="object-cover" />
             <AvatarFallback>JN</AvatarFallback>
           </Avatar>
           <h1 className="text-slate-200 text-4xl md:text-5xl font-mono tracking-tight">
@@ -42,21 +43,11 @@ export const Presentation = (): JSX.Element => {
             </HyperText>
             <HyperText className="text-slate-200 text-xl leading-relaxed" duration={400}>
               with a strong background in Javascript and Typescript
-            </HyperText>            
+            </HyperText>
           </CardContent>
         </Card>
       </div>
-      <div className="flex flex-wrap gap-2 p-8">
-        {skills.map((skill) => (
-          <Badge
-            key={skill}
-            variant="secondary"
-            className="bg-teal-500/10 text-teal-400 hover:bg-teal-500/20 transition-colors px-3 py-1 text-xl"
-          >
-            {skill}
-          </Badge>
-        ))}
-      </div>
+      <InfiniteScroll data={skills} />
       <ContactIcons />
       <Banner />
     </div>
