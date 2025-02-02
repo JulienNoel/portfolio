@@ -7,7 +7,7 @@ type TProps = {
 
 export const InfiniteScroll = ({ data }: TProps): JSX.Element => {
     return (
-        <div className="flex overflow-hidden mask-gradient">
+        <div className="pt-4 flex overflow-hidden mask-gradient">
             <div className="whitespace-nowrap flex-row flex gap-2 animate-infinite-scroll">
                 {[...data, ...data].map((it) => (
                     <div key={it} className="">

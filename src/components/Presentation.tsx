@@ -25,7 +25,7 @@ const skills = [
 
 export const Presentation = (): JSX.Element => {
   return (
-    <div className="flex flex-col h-screen justify-between md:fixed md:w-1/2 bg-gradient-to-b from-slate-900 to-slate-800">
+    <div className="pt-4 flex flex-col md:h-screen md:justify-between md:fixed md:w-1/2 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="flex flex-col px-8">
         <div className="flex flex-col items-center gap-4">
           <Avatar className="w-[150px] h-[150px]">
