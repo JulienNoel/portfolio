@@ -32,7 +32,7 @@ export const Presentation = (): JSX.Element => {
             <AvatarImage src="/julien-noel.jpg" alt="julien Noel" className="object-cover" />
             <AvatarFallback>JN</AvatarFallback>
           </Avatar>
-          <h1 className="text-slate-200 text-4xl md:text-5xl font-mono tracking-tight">
+          <h1 className="text-slate-200 text-4xl md:text-5xl pb-4 font-mono text-center tracking-tight">
             {TITLE} <span className="animate-waving-hand inline-block origin-[70%_70%]">👋</span>
           </h1>
         </div>

@@ -100,7 +100,7 @@ const config = {
             boxShadow: "0 0 0 0 var(--pulse-color)",
           },
           "50%": {
-            boxShadow: "0 0 0 8px var(--pulse-color)",
+            boxShadow: "0 0 0 6px var(--pulse-color)",
           },
         },
         wave: {
